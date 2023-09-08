@@ -4,7 +4,7 @@ function sidenVises() {
   bodyElement.dataset.theme = localTheme;
 }
 const localTheme = localStorage.getItem("theme");
-localStorage.setItem("theme", "hawaii");
+localStorage.setItem("theme", "light");
 let bodyElement = document.querySelector("body");
 const selectTheme = document.querySelector("#changeTheme");
 selectTheme.addEventListener("change", themeSwitch);
