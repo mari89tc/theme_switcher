@@ -3,21 +3,26 @@
   margin: 0;
   box-sizing: border-box;
 }
+img {
+  max-width: 100%;
+}
 [data-theme="hawaii"] {
-  --header-bg-col: hotpink;
-  --main-bg-col: rgb(154, 255, 142);
-  --footer-bg-col: rgb(250, 250, 114);
+  --header-bg-col: #eb6141;
+  --main-bg-col: #f5cbde;
+  --footer-bg-col: #b2eb59;
   --font-col: black;
-  --select-col: hotpink;
-  --href-col: rgb(237, 35, 244);
+  --select-col: #eb6141;
+  --href-col: #8a40f1;
+  --img-bg: url(pic1.png);
 }
 [data-theme="dark"] {
-  --header-bg-col: rgba(49, 32, 131, 0.642);
-  --main-bg-col: rgb(70, 70, 107);
-  --footer-bg-col: rgb(17, 17, 82);
+  --header-bg-col: #19506b;
+  --main-bg-col: #07171f;
+  --footer-bg-col: #0c2633;
   --font-col: white;
-  --select-col: rgba(49, 32, 131, 0.642);
-  --href-col: rgb(195, 142, 196);
+  --select-col: #19506b;
+  --href-col: #277fab;
+  --img-bg: url(pic4.png);
 }
 [data-theme="light"] {
   --header-bg-col: rgb(245, 235, 206);
@@ -26,17 +31,27 @@
   --font-col: rgb(76, 40, 40);
   --select-col: rgb(245, 235, 206);
   --href-col: rgb(147, 83, 34);
+  --img-bg: url(pic2.png);
 }
 [data-theme="green"] {
-  --header-bg-col: rgb(63, 215, 73);
-  --main-bg-col: rgb(188, 248, 162);
-  --footer-bg-col: rgb(70, 126, 83);
+  --header-bg-col: #5f872b;
+  --main-bg-col: #8cc63f;
+  --footer-bg-col: #324717;
   --font-col: rgb(6, 6, 6);
-  --select-col: rgb(81, 246, 59);
+  --select-col: #5f872b;
   --href-col: rgb(78, 128, 29);
+  --img-bg: url(pic3.png);
 }
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+.img_body {
+  background-image: var(--img-bg);
+  height: 812px;
+  width: 831px;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 700px 1000px;
 }
 header {
   background-color: var(--header-bg-col);
@@ -51,23 +66,27 @@ header h2 {
 }
 label {
   font-size: 20px;
+  text-transform: uppercase;
 }
 #changeTheme {
   background-color: var(--select-col);
   color: var(--font-col);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 15px;
+  text-transform: uppercase;
   border: 2px solid var(--font-col);
   padding: 10px;
 }
 main {
   background-color: var(--main-bg-col);
   font-size: 30px;
+  text-transform: uppercase;
   color: var(--font-col);
   padding: 40px;
   padding-bottom: 280px;
 }
 a[href*="mozilla"] {
+  text-transform: uppercase;
   color: var(--href-col);
   font-size: 20px;
 }
@@ -75,6 +94,7 @@ footer {
   background-color: var(--footer-bg-col);
   padding-bottom: 50px;
   font-size: 20px;
+  text-transform: uppercase;
   color: var(--font-col);
   padding: 40px;
 }
